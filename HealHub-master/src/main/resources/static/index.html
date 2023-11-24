@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{_template::head('static')}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Healhub</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="nav-wrapper">
+            <a href="https://cdn.discordapp.com/attachments/946468431794954250/1174503907783884830/Letras_Logo_HealHub.png?ex=6567d500&is=65556000&hm=79731e06bbb04d49edb187e7833918274101f84769a5a6b7253892366ba2be69&">
+    
+                <img src="https://cdn.discordapp.com/attachments/946468431794954250/1174503907783884830/Letras_Logo_HealHub.png?ex=6567d500&is=65556000&hm=79731e06bbb04d49edb187e7833918274101f84769a5a6b7253892366ba2be69&" alt="Logo HealHub" style="max-width: 70px; max-height: 65px; padding: 5px;">
+    
+            </a>
+            <a href="/home" class="brand-logo">HealHub</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/chat">Chat</a></li>
+                <li><a href="/formulario">Formulário</a></li>
+                <li><a href="/agendamento">Agendamento</a></li>
+                <li><a href="/desc">Como o Projeto Funciona</a></li>
+                <li>
+                    <!-- Dropdown Trigger -->
+                    <a class='dropdown-trigger' href='#' data-target='dropdown1'>
+                        <img th:src="${avatar_url}" class="avatar" alt="foto do usuário" />
+                    </a>
+                    <!-- Dropdown Structure -->
+                    <ul id='dropdown1' class='dropdown-content'>
+                        <li><span th:text="${username}"></span></li>
+                        <li class="divider" tabindex="-1"></li>
+                        <li>
+                            <a href="/logout">
+                                <i class="material-icons">logout</i>
+                                sair
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+    
+            </ul>
+        </div>
+    </nav>
+<div style="
+            background-color: #F3F3E9;
+            height:100vh;
+            "
+>
+
+    <div style="
+          color: #678362;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          "
+    >
+        <h1>Bem-vindo ao HealHub🌐</h1>
+        <h2>Agende. Planeje. Cuide: Sua saúde em um só lugar! </h2>
+    </div>
+
+    <div class="containerstatic">
+
+        <div class="row" style="align-items: center; justify-content: center; display: flex;">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img style="width: 100%; height: 250px;"src="https://cdn.discordapp.com/attachments/946468431794954250/1174506276319920229/Fundo_chat.png?ex=6567d735&is=65556235&hm=da5f252242490f86800481db12a369c88fa1a09c10e4309c44e7828c40b25145&">
+                    </div>
+                    <div class="card-content" style="width: 100%; height: 10px; align-items: center; justify-content: center; display: flex;">
+                        <p>Chat</p>
+                    </div>
+                    <div class="card-action" style="width: 100%; height: 70px; align-items: center; justify-content: center; display: flex;">
+                        <a href="/chat" class="waves-effect waves-light btn-large" style="background-color: #678362;"><i class="material-icons right">send</i>Iniciar Conversa</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <img style="width: 100%; height: 250px;" src="https://cdn.discordapp.com/attachments/946468431794954250/1174507321746010253/Fundo_Agendamento.png?ex=6567d82e&is=6555632e&hm=5a5c1000729596a77468f63cadc0cc463e1baa3bea9f59f9708ce0537e4915da&">
+                    </div>
+                    <div class="card-content" style="width: 100%; height: 30px; align-items: center; justify-content: center; display: flex;">
+                        <p>Agendamento</p>
+                    </div>
+                    <div class="card-action" style="width: 100%; height: 70px; align-items: center; justify-content: center; display: flex;">
+                        <a  href="/agendamento" class="waves-effect waves-light btn-large" style="background-color: #678362;"><i class="material-icons right">send</i>Agende agora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="align-items: center; justify-content: center; display: flex;">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-image">
+                        <img style="width: 100%; height: 250px;"src="https://cdn.discordapp.com/attachments/946468431794954250/1174738264385650738/fundo_formulario.png?ex=6568af43&is=65563a43&hm=16be9ebe2212b4fdd439424f8c1e274c020a336f6ee33f4ff1f9d4f2c4ee9298&">
+                    </div>
+                    <div class="card-content" style="width: 100%; height: 10px; align-items: center; justify-content: center; display: flex;">
+                        <p>Formulário</p>
+                    </div>
+                    <div class="card-action" style="width: 100%; height: 70px; align-items: center; justify-content: center; display: flex;">
+                        <a href="/formulario" class="waves-effect waves-light btn-large" style="background-color: #678362;"><i class="material-icons right">send</i>Cadastrar Formulário</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        const options = {
+            constrainWidth: false,
+            coverTrigger: false
+        }
+        var instances = M.Dropdown.init(elems, options);
+    });
+</script>
+
